@@ -1,0 +1,27 @@
+{
+  "name": "proshop-backend",
+  "version": "1.0.0",
+  "description": "proshop ecom shoping cart",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node Backend/server",
+    "server": "nodemon Backend/server",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node Backend/seeder",
+    "data:delete": "node Backend/seeder -d"
+  },
+  "author": "ashadul-mridha",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mongoose": "^6.3.3"
+  },
+  "devDependencies": {
+    "concurrently": "^7.1.0"
+  }
+}
